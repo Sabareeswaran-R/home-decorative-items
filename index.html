@@ -1,0 +1,45 @@
+<canvas id="snowCanvas"></canvas>
+
+<div id="loginOverlay" class="overlay">
+    <div class="login-card">
+        <h2>Luxury Home Decor</h2>
+        <p>Exclusive Member Access</p>
+        <div class="input-group">
+            <input type="text" id="username" placeholder="Username (admin)">
+            <input type="password" id="password" placeholder="Password (1234)">
+        </div>
+        <button class="rainbow-btn" onclick="checkLogin()">Enter Gallery</button>
+    </div>
+</div>
+
+<main id="mainContent" class="hidden">
+    <header>
+        <h1 class="title">Luxury Collection</h1>
+        <div class="underline"></div>
+    </header>
+
+    <div class="gallery-grid" id="productGrid"></div>
+
+    <div class="cart-container">
+        <h3>Your Selection</h3>
+        <div id="cartList"></div>
+        <div class="total-section">
+            <strong>Total Amount: ₹<span id="totalPrice">0</span></strong>
+        </div>
+        <button class="rainbow-btn" onclick="placeOrder()">Place Order Now</button>
+    </div>
+</main>
+
+<div id="detailModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div id="modalData"></div> </div>
+</div>
+
+<div id="orderSuccess" class="hidden success-screen">
+    <div class="login-card">
+        <h1 style="color: #48ff00;">✔ Success!</h1>
+        <p>Your Order Has Been Placed.</p>
+        <p style="color: #aaa;">Redirecting back...</p>
+    </div>
+</div>
